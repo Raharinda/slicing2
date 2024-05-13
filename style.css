@@ -275,7 +275,7 @@
         width: 25.2%;
         padding: 2rem;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         background-color: #121212;
         cursor: pointer;
@@ -292,28 +292,48 @@
     nav ul li a:hover {
         color: red;
     }
+
+    .navbar {
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    .navbar .navbar-form {
+      font-size: 0.8rem;
+    }
+
+    .navbar .navbar-form .login {
+      padding: 0.5rem 1.6rem 0.5rem 1.6rem;
+
+    }
     
 
     /* Body */
 
-    section {
-      background-size: cover;
-      background-size: 100%;
-      background-color: red;
+    .hero {
+      background-image: url(../Slicing/assets/mobile.png);
     }
 
     .hero .content {
-      font-size: 0.6rem;
+      margin:10vh 0vh 0vh 0vh;
+      padding: 1rem;
+      font-size: 0.8rem;
+      margin-right: 10rem;
+    }
+
+    .hero .content p {
+      margin-bottom: 0vh;
+    }
+
+    .hero .content{
+      background-color: red;
     }
 
     .hero .content a {
       display: flex;
       flex-direction: column;
-      max-width: 8rem;
       text-align: center;
       padding: 0.35rem 1.5rem 0.35rem 1.5rem;
-
-
     }
 
     .hero .content .link1 {
