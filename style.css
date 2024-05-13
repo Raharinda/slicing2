@@ -1,0 +1,328 @@
+:root {
+    --primary: #a7c8fe;
+  }
+  
+  *,
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  body {
+    background-size: 100%;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* NAVBAR */
+  
+  .navbar {
+    display: flex;
+    color: #eaeaea;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  
+  nav ul {
+    text-decoration: none;
+    font-style: none;
+    list-style-type: none;
+    display: flex;
+  }
+
+  .navbar .navbar-nav {
+    display: flex;
+    font-style: none;
+    list-style-type: none;
+    gap: 3rem;
+  }
+  
+  .navbar .navbar-nav a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-style: normal;
+    padding: 0.5rem;
+    display: block;
+    margin: 0.5rem;
+  }
+  
+  .navbar .navbar-form a {
+    color: #eaeaea;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .navbar .navbar-form {
+    font-size: 1.1rem;
+    padding: 1rem 0rem 1rem 0rem;
+    max-width: none;
+  }
+  
+  .navbar .navbar-form .login {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 20rem;
+    margin-left: 2rem;
+    background-color: var(--primary);
+  }
+  
+  .navbar .navbar-nav:focus {
+    color: var(--primary);
+    cursor: pointer;
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    color: #eaeaea;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.15rem solid;
+    transform: scaleX(0);
+    transition: 0.3s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .navbar .navbar-form a:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-form .login:hover {
+    color: var(--primary);
+    background-color: #eaeaea;
+  }
+  
+  
+  
+  /* Hamburger Menu */
+  .navbar-toggler {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #eaeaea;
+    transition: 0.3s;
+  }
+  
+  /* Hero Section */
+  
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(assets/pxfuel.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  
+  .hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      rgba(1, 1, 1, 0.4) 1%,
+      rgba(22, 22, 22, 0) 100%
+    );
+  }
+  
+  .hero .content {
+    padding: 1.4rem 7%;
+    z-index: 9999;
+  }
+  
+  .hero .content h1 {
+    font-size: 3em;
+    max-width: 30rem;
+    color: white;
+  }
+  
+  .hero .content p {
+    margin: 1rem 0rem 4rem 0rem;
+    font-size: 1em;
+    color: var(--primary);
+  }
+  
+  .hero .content a {
+    margin-top: 3rem;
+
+    font-style: none;
+    text-decoration: none;
+  }
+
+  .hero .content .link {
+    padding: 1rem 0rem 1rem 0rem;
+    max-width: none;
+  }
+  
+  .hero .content .link1 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    background-color: #ffff;
+    padding: 0.7rem 3rem 0.7rem 3rem;
+    border-radius: 20rem;
+    margin-right: 7rem;
+  }
+  
+  .hero .content .link2 {
+    font-size: 1.1 rem;
+    color: #ffff;
+    background-color: var(--primary);
+    padding: 0.7rem 3rem 0.7rem 3rem;
+    border-radius: 20rem;
+    max-height: max-content;
+  }
+  
+  .hero .content .link1:hover {
+    color: #ffff;
+    background: transparent;
+  }
+  
+  .hero .content .link2:hover {
+    color: var(--primary);
+    background-color: transparent;
+  }
+  
+  /* hamburger menu */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    margin: 15px;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #eaeaea;
+    border-radius: 3px;
+  }
+  
+  .menu-toggle input {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  /* HAMBURGER ANIMATION */
+  .menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+  
+  .menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+  
+  .menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-2px, -1px);
+  }
+  
+  .menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, -1px);
+  }
+  
+  .menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  /* RESPONSIVE AREA */
+  
+  @media screen and (min-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    /* NAVBAR */
+    nav ul {
+        position: absolute;
+        font-size: 1rem;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 25.2%;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #121212;
+        cursor: pointer;
+        z-index: -1;
+        transform: translateY(-150%);
+    }
+
+
+    
+    nav ul.slide {
+        transform: translateY(0);
+    }
+
+    nav ul li a:hover {
+        color: red;
+    }
+    
+
+    /* Body */
+
+    section {
+      background-size: cover;
+      background-size: 100%;
+      background-color: red;
+    }
+
+    .hero .content {
+      font-size: 0.6rem;
+    }
+
+    .hero .content a {
+      display: flex;
+      flex-direction: column;
+      max-width: 8rem;
+      text-align: center;
+      padding: 0.35rem 1.5rem 0.35rem 1.5rem;
+
+
+    }
+
+    .hero .content .link1 {
+      font-size: 0.8rem;
+    }
+
+    .hero .content .link2 {
+      font-size: 0.8rem;
+    }
+
+}
+  
