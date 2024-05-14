@@ -273,7 +273,7 @@
         height: 35vh;
         border-radius: 0rem 0rem 10rem 10rem;
         width: 1rem;
-        padding: 5rem;
+        padding: 4.5rem;
         flex-direction: column;
         align-items: center;
         background-color: var(--primary);
