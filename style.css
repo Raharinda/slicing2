@@ -9,7 +9,6 @@
     padding: 0;
     transition: 0.3s;
     background-size: cover;
-    overflow: hidden;
   }
   
   body {
@@ -27,7 +26,7 @@
     background-color: transparent;
     justify-content: space-between;
     padding: 1rem 7%;
-    font-size: 20px;
+    font-size: 1rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -66,7 +65,7 @@
   }
 
   .navbar .navbar-form {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 1rem 0rem 1rem 0rem;
     max-width: none;
   }
@@ -116,7 +115,7 @@
     width: 30px;
     height: 20px;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 9;
   }
   
   .bar {
@@ -153,7 +152,7 @@
   
   .hero .content {
     padding: 1.4rem 7%;
-    z-index: 9999;
+    z-index: 1;
   }
   
   .hero .content h1 {
@@ -170,7 +169,6 @@
   
   .hero .content a {
     margin-top: 3rem;
-
     font-style: none;
     text-decoration: none;
   }
@@ -215,6 +213,7 @@
     height: 20px;
     justify-content: space-between;
     margin: 15px;
+    z-index: 99;
   }
   
   .menu-toggle span {
@@ -259,7 +258,7 @@
   
   @media screen and (min-width: 576px) {
     .menu-toggle {
-        display: flex;
+        display: none;
     }
 }
 
@@ -271,15 +270,15 @@
         font-size: 1rem;
         right: 0;
         top: 0;
-        height: 100vh;
-        width: 25.2%;
-        padding: 2rem;
+        height: 35vh;
+        border-radius: 0rem 0rem 10rem 10rem;
+        width: 1rem;
+        padding: 5rem;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        background-color: #121212;
+        background-color: var(--primary);
         cursor: pointer;
-        z-index: -1;
+        z-index: 1;
         transform: translateY(-150%);
     }
 
@@ -296,53 +295,61 @@
     .navbar {
       justify-content: space-between;
       padding: 0;
+      left: -6rem;
     }
 
     .navbar .navbar-form {
       font-size: 0.8rem;
+      
     }
 
     .navbar .navbar-form .login {
       padding: 0.5rem 1.6rem 0.5rem 1.6rem;
-
     }
     
 
     /* Body */
+    
+
+    main .content {
+      max-width: 10rem;
+      background-color: #121212;
+    }
 
     .hero {
       background-image: url(../Slicing/assets/mobile.png);
+      background-size: cover;
     }
 
     .hero .content {
-      margin:10vh 0vh 0vh 0vh;
-      padding: 1rem;
-      font-size: 0.8rem;
-      margin-right: 10rem;
+      margin:10vh 0vh 0vh 2vh;
+      padding: 0rem;
+      font-size: 0.7rem;
     }
 
     .hero .content p {
       margin-bottom: 0vh;
+      font-size: 1rem;
+      margin-right: 5cqmax;
+
     }
 
-    .hero .content{
-      background-color: red;
-    }
 
     .hero .content a {
+  
       display: flex;
       flex-direction: column;
       text-align: center;
       padding: 0.35rem 1.5rem 0.35rem 1.5rem;
+      font-size: 0.8rem;
+      max-width: 7.5rem;
     }
 
     .hero .content .link1 {
       font-size: 0.8rem;
+      justify-content: center;
     }
 
-    .hero .content .link2 {
-      font-size: 0.8rem;
-    }
 
 }
   
