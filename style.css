@@ -317,8 +317,8 @@
     }
 
     .hero {
-      background-image: url(../Slicing/assets/mobile.png);
       background-size: cover;
+      background-position: 25%;
     }
 
     .hero .content {
